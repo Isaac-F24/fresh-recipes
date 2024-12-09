@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='header.css') }}">
+<nav class="navbar">
+    <ul class="navbarContent">
+        <li class="navLinks"> <a href="/">Recipes</a> </li>
+        <li class="navLinks"> <a href="/search">Search</a> </li>
+        <li class="navLinks" id="logo"> FreshRecipes </li>
+
+        {% if logged_in %}
+        <li class="navLinks"> <a href="/create_recipe">Create Recipe</a> </li>
+        <li class="navLinks"> <a href="/account">Account</a> </li>
+        {% else %}
+        <li class="navLinks"> <a href="/login">Login</a> </li>
+        <li class="navLinks"> <a href="/signup">Sign up</a> </li>
+        {% endif %}
+    </ul>
+</nav>
+
+{% for message in get_flashed_messages() %}
+<div class="messageBox">
+    <p> {{ message }} </p>
+</div>
+{% endfor %}

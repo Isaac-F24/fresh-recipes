@@ -1,0 +1,123 @@
+#box {
+    margin: auto;
+    margin-top: 5em;
+    display: block;
+    max-width: 950px;
+
+    background-color: rgb(240, 224, 205);
+
+    /* parameters: left right blur spread color */
+    box-shadow:  3px 3px 8px 0px rgba(0,0,0,0.59);
+    
+    border-radius: 10px;
+    border-color: rgb(27, 86, 11);
+    border-style: solid;
+    border-width: 5px;
+
+    padding:1.3em;
+
+    font-family: 'Poppins', 'Arial', sans-serif;
+}
+
+#img {
+    max-width: 80%;
+    max-height: 40%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.59);
+}
+
+#box h2 {
+    margin-top: 0;
+    color : rgb(27, 86, 11);
+    transition: 0.2s;
+}
+
+#box h2:hover {
+    color : rgb(42, 114, 22);
+    transition: 0.2s;
+}
+
+#form {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+
+#form input {
+    font-family: 'Poppins', 'Arial', sans-serif;
+    margin: 0.5em;
+    
+    border-radius: 5px;
+    border-color: rgb(27, 86, 11);
+
+    padding: 0.4em;
+    width: 250px;
+}
+
+#form h4 {
+    flex-basis: 100%;
+    margin: 0 0.5em;
+}
+
+/* font-family: 'Poppins', 'Arial', sans-serif; */
+
+.button {
+    font-family: 'Poppins', 'Arial', sans-serif;
+    background-color: rgb(27, 86, 11);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.4em;
+
+    transition: 0.1s;
+
+    width: 130px;
+}
+
+.button:hover {
+    background-color: rgb(42, 114, 22);
+    transition: 0.1s;
+}
+
+.button:active {
+    background-color: rgb(11, 86, 85);
+    transition: 0.1s;
+}
+
+#results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin: auto;
+    max-width: 1400px;
+}
+
+.idNum {
+    font-style: italic;
+    color: rgba(0,0,0,0.59);
+}
+
+.recipe {
+    margin: 15px;
+    padding: 0.5em;
+    border-radius: 20px;
+    border-color: rgb(27, 86, 11);
+    border-style: solid;
+    border-width: 4px;
+
+    background-color: rgb(240, 224, 205);
+
+    box-shadow:  4px 4px 2px 0px rgba(0,0,0,0.59);
+
+    width: 225px;
+
+    font-family: 'Poppins', 'Arial', sans-serif;
+    font-size: 0.95em;
+
+}
+
+#results h1 {
+    font-family: 'Poppins', 'Arial', sans-serif;
+}

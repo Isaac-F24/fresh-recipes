@@ -1,0 +1,60 @@
+#infoBox {
+    margin: auto;
+    margin-top: 5em;
+    display: block;
+    max-width: 850px;
+
+    background-color: rgb(240, 224, 205);
+
+    /* parameters: left right blur spread color */
+    box-shadow:  3px 3px 8px 0px rgba(0,0,0,0.59);
+    
+    border-radius: 10px;
+    border-color: rgb(27, 86, 11);
+    border-style: solid;
+    border-width: 5px;
+
+    padding:2em;
+
+    font-family: 'Poppins', 'Arial', sans-serif;
+}
+
+#infoBox h2 {
+    margin-top: 0;
+    color : rgb(27, 86, 11);
+    transition: 0.2s;
+}
+
+#infoBox h2:hover {
+    color : rgb(42, 114, 22);
+    transition: 0.2s;
+}
+
+#infoBox h4 {
+    margin-bottom: 0;
+    color: rgb(27, 86, 11);
+}
+/* font-family: 'Poppins', 'Arial', sans-serif; */
+
+#logoutButton {
+    font-family: 'Poppins', 'Arial', sans-serif;
+    background-color: rgb(27, 86, 11);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.4em;
+
+    transition: 0.1s;
+
+    width: 15%;
+}
+
+#logoutButton:hover {
+    background-color: rgb(42, 114, 22);
+    transition: 0.1s;
+}
+
+#logoutButton:active {
+    background-color: rgb(11, 86, 85);
+    transition: 0.1s;
+}

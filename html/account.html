@@ -1,0 +1,25 @@
+{% include "head.html" %}
+<link rel="stylesheet" href="{{ url_for('static', filename='account.css') }}">
+<body>
+
+    {% include "header.html" %}
+
+    <div id="infoBox">
+        <h2> Account info </h2>
+  
+        <h4> Email address: </h4>
+        <p> {{ email }} </p>
+
+        <h4> Username: </h4>
+        <p> {{ username }} </p>
+
+        <h4> Password: </h4>
+        <p> {{ "*" * password|length }} </p>
+
+        <a href="/logout">
+            <button id="logoutButton">Logout</button>
+        </a>
+    </div>
+
+
+</body>

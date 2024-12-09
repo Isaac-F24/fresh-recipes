@@ -1,0 +1,71 @@
+.navbar {
+    background-color: rgb(240, 224, 205);
+    display: block;
+
+    position: sticky;
+    top:0;
+
+    width: 100%;
+}
+
+.navbarContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    max-width: 900px;
+    padding: 0.5em 0;
+
+    margin: 0 auto;
+
+    list-style-type: none;
+}
+
+.navLinks a {
+    text-align: center;
+    font-family: 'Poppins', 'Arial', sans-serif;
+
+    text-decoration: none;
+    color: black;
+}
+
+.navLinks a:hover {
+    color: rgb(27, 86, 11);
+}
+
+#logo {
+    font-family: 'Preahvihear', 'Franklin Gothic Medium', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    color: rgb(27, 86, 11);
+}
+
+body {
+    margin: 0;
+    padding:0;
+}
+
+.messageBox {
+    margin-left: 3em;
+    margin-top: 1em;
+
+    background-color: rgb(242, 246, 241);
+
+    /* parameters: left right blur spread color */
+    box-shadow:  3px 3px 4px 0px rgba(0,0,0,0.59);
+    
+    border-radius: 10px;
+    border-color: rgb(27, 86, 11);
+    border-style: solid;
+    border-width: 2px;
+
+    padding: 1em;
+
+    font-family: 'Poppins', 'Arial', sans-serif;
+    font-size: small;
+
+    max-width: 300px;
+}
+.messageBox p {
+    margin: 0;
+}

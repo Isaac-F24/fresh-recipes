@@ -1,0 +1,79 @@
+{% include "head.html" %}
+<link rel="stylesheet" href="{{ url_for('static', filename='edit_recipe.css') }}">
+<body>
+
+    {% include "header.html" %}
+
+    <div id="box">
+        <h1> Edit Recipe </h1>
+
+        <form action="/edit_recipe/{{ recipe.id }}" method="POST" id="form">
+            <input id="name" type="text" name="name" placeholder="Recipe Name" value="{{ recipe.name }}" required>
+            <br>
+            <label for="image">Paste an image link here!</label>
+            <br>
+            <input id="imgLink" type="url" name="image" placeholder="Image Link" value="{{ recipe.photo }}">
+            <br>
+            <input id="type" type="text" name="type" placeholder="Recipe Category" value="{{ recipe.type }}" required>
+
+            <p id="ingredientHeader">Ingredients:</p>
+            <div id="ingredients">
+
+                <div id="ingredient">
+                    <input class="quantities" type="text" name="quantities" placeholder="Quantity" value="{{ first_ingredient.quantity }}" required>
+                    <input class="items" type="text" name="items" placeholder="Ingredient" value="{{ first_ingredient.name }}" required>
+                </div>
+
+                {% if ingredients %}
+                {% for ingredient in ingredients %}
+                <div class="ingredient">
+                    <input class="quantities" type="text" name="quantities" placeholder="Quantity" value="{{ ingredient.quantity }}" required>
+                    <input class="items" type="text" name="items" placeholder="Ingredient" value="{{ ingredient.name }}" required>
+                    <button type="button" id="remove">Remove</button>
+                </div>
+                {% endfor %}
+                {% endif %}
+            </div>
+
+            <button type="button" id="addIngredient">Add Ingredient</button>
+
+            <br>
+
+            <textarea id="instructions" type="text" name="instructions" placeholder="Instructions:" required>{{ recipe.method }}</textarea>
+            <br>
+            <input id="save" type="submit" value="Save Recipe" >
+
+            <a href="/delete_recipe/{{ recipe.id }}" > <button type="button" id="delete">Delete Recipe</button> </a>
+        </form>
+    </div>
+
+    <script>
+        const ingredientBox = document.getElementById("ingredients");
+        const button = document.getElementById("addIngredient");
+        let ingredientCount = 1;
+
+        function addIngredient() {
+            ingredientCount++;
+            const ingredient = document.createElement("div");
+            ingredient.className = "ingredient";
+            ingredient.innerHTML = `
+                <input class="quantities" type="text" name="quantities" placeholder="Quantity" required>
+                <input class="items" type="text" name="items" placeholder="Ingredient" required>
+                <button type="button" id="remove">Remove</button>
+            `;
+            ingredientBox.appendChild(ingredient);
+        }
+
+        button.addEventListener("click", addIngredient);
+
+        function removeIngredient(event) {
+            if (event.target.id == "remove") {
+                ingredientCount--;
+                event.target.parentElement.remove();
+            }
+        }
+
+        ingredientBox.addEventListener("click", removeIngredient);
+
+    </script>
+</body>

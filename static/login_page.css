@@ -1,0 +1,84 @@
+#loginBox {
+    margin: auto;
+    margin-top: 5em;
+    display: block;
+    max-width: 650px;
+
+    background-color: rgb(240, 224, 205);
+
+    /* parameters: left right blur spread color */
+    box-shadow:  3px 3px 8px 0px rgba(0,0,0,0.59);
+    
+    border-radius: 10px;
+    border-color: rgb(27, 86, 11);
+    border-style: solid;
+    border-width: 5px;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#loginForm .loginText {
+    margin: 1em 0.5em;
+    padding: 0.5em;
+
+    width: 75%;
+
+    font-family: 'Poppins', 'Arial', sans-serif;
+}
+
+#loginForm .loginButton {
+    margin: 1.5em 0.5em;
+    padding: 0.5em;
+
+    width: 55%;
+
+    font-family: 'Poppins', 'Arial', sans-serif;
+    background-color: rgb(27, 86, 11);
+    color: white;
+    border: none;
+    border-radius: 5px;
+
+    transition: 0.1s;
+}
+
+#loginForm .loginButton:hover {
+    background-color: rgb(42, 114, 22);
+    transition: 0.1s;
+}
+
+#loginForm .loginButton:active {
+    background-color: rgb(11, 86, 85);
+    transition: 0.1s;
+}
+
+#loginBox h1 {
+    text-align: center;
+    font-family: 'Poppins', 'Arial', sans-serif;
+    color: rgb(27, 86, 11);
+    transition: 0.2s;
+}
+
+
+#loginBox h1:hover {
+    color: rgb(42, 114, 22);
+    transition: 0.2s;
+}
+
+#signupLink {
+    text-align: center;
+    font-family: 'Poppins', 'Arial', sans-serif;
+    transition: 0.2s;
+}
+
+#error {
+    color: red;
+    font-family: 'Poppins', 'Arial', sans-serif;
+    text-align: center;
+    margin: 0.5em;
+}

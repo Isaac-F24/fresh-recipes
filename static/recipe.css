@@ -1,0 +1,113 @@
+#recipe {
+    margin: auto;
+    margin-top: 5em;
+    margin-bottom: 3em;
+    display: block;
+    max-width: 1050px;
+
+    background-color: rgb(240, 232, 223);
+
+    /* parameters: left right blur spread color */
+    box-shadow:  5px 5px 8px 0px rgba(0,0,0,0.59);
+    
+    border-radius: 10px;
+    border-color: rgb(27, 86, 11);
+    border-style: none;
+    border-width: 5px;
+
+    padding:2em;
+
+    font-family: 'Poppins', 'Arial', sans-serif;
+}
+
+#img {
+    display: block;
+    margin-right: auto;
+    max-width: 30%;
+    border-radius: 4px;
+
+    box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.59);
+}
+
+#recipeImg {
+    display: block;
+    margin-right: auto;
+    max-width: 70%;
+    max-height: 500px;
+    border-radius: 20px;
+
+    box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.59);
+}
+
+#recipe h1 {
+    margin-top: 0;
+    color : rgb(27, 86, 11);
+    transition: 0.2s;
+}
+
+#recipe h1:hover {
+    color : rgb(42, 114, 22);
+    transition: 0.2s;
+}
+
+#recipe h2 {
+    margin-top: 0;
+    color : rgb(27, 86, 11);
+}
+
+#infoBox h4 {
+    margin-bottom: 0;
+    color: rgb(27, 86, 11);
+}
+/* font-family: 'Poppins', 'Arial', sans-serif; */
+
+#logoutButton {
+    font-family: 'Poppins', 'Arial', sans-serif;
+    background-color: rgb(27, 86, 11);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.4em;
+
+    transition: 0.1s;
+
+    width: 15%;
+}
+
+#logoutButton:hover {
+    background-color: rgb(42, 114, 22);
+    transition: 0.1s;
+}
+
+#logoutButton:active {
+    background-color: rgb(11, 86, 85);
+    transition: 0.1s;
+}
+
+#method {
+    white-space: pre-wrap;   /* preserves newlines */
+}
+
+#edit {
+    background-color: rgb(27, 86, 11);
+
+    font-family: 'Poppins', 'Arial', sans-serif;
+    color: white;
+
+    font-size: large;
+
+    border-radius: 5px;
+    border: solid 2px rgb(0, 0, 0);
+
+    transition: 0.1s;
+
+}
+
+#edit:hover {
+    background-color: rgb(42, 114, 22);
+    transition: 0.1s;
+}
+
+#edit:active {
+    background-color: rgb(19, 180, 177);
+}

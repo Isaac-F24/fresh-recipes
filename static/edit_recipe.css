@@ -1,0 +1,193 @@
+#box {
+    margin: auto;
+    margin-top: 5em;
+    display: block;
+    max-width: 1300px;
+
+    background-color: rgb(240, 232, 223);
+
+    /* parameters: left right blur spread color */
+    box-shadow:  5px 5px 8px 0px rgba(0,0,0,0.59);
+    
+    border-radius: 10px;
+    border-color: rgb(27, 86, 11);
+    border-style: none;
+    border-width: 5px;
+
+    padding:2em;
+
+    font-family: 'Poppins', 'Arial', sans-serif;
+}
+
+#1 {
+    height: 2em;
+}
+
+#box h1 {
+    margin-top: 0;
+    color : rgb(27, 86, 11);
+    transition: 0.2s;
+}
+
+#box h1:hover {
+    color : rgb(42, 114, 22);
+    transition: 0.2s;
+}
+
+#name {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Poppins', 'Arial', sans-serif;
+    
+    width: 50%;
+    min-width: 400px;
+
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    
+    padding-left: 0.3em;
+
+    margin-bottom: 1em;
+}
+
+#imgLink {
+    font-family: 'Poppins', 'Arial', sans-serif;
+    width: 60%;
+
+    margin-bottom: 1.5em;
+}
+
+#type {
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Poppins', 'Arial', sans-serif;
+
+    border-radius: 6px;
+    border-width: 1px;
+    border-style: solid;
+
+    margin-bottom: 1em;
+}
+
+#ingredientHeader {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.quantities, .items {
+    width: 20%;
+    font-family: 'Poppins', 'Arial', sans-serif;
+
+    background: none;
+
+    border: none;
+    border-bottom: 1px solid rgb(27, 86, 11);
+
+    margin: 0.5em;
+    margin-left: 0;
+}
+
+#remove {
+    background-color: rgb(134, 0, 0);
+
+    font-family: 'Poppins', 'Arial', sans-serif;
+    color: white;
+    font-size: 0.7em;
+
+    border-radius: 5px;
+    border: none;
+
+    transition: 0.1s;
+}
+
+#remove:hover {
+    background-color: rgb(164, 13, 13);
+    transition: 0.1s;
+}
+
+#remove:active {
+    background-color: rgb(225, 78, 25);
+}
+
+#addIngredient {
+    background-color: rgb(27, 86, 11);
+
+    font-family: 'Poppins', 'Arial', sans-serif;
+    color: white;
+
+    border-radius: 5px;
+    border: none;
+
+    transition: 0.1s;
+
+    margin-bottom: 2em;
+}
+
+#addIngredient:hover {
+    background-color: rgb(42, 114, 22);
+    transition: 0.1s;
+}
+
+#addIngredient:active {
+    background-color: rgb(19, 180, 177);
+}
+
+#instructions {
+    width: 90%;
+    min-height: 100px;
+    
+    font-family: 'Poppins', 'Arial', sans-serif;
+    border-radius: 10px;
+    
+    padding: 0.5em;
+
+    margin-bottom: 1em;
+}
+
+#save {
+    background-color: rgb(27, 86, 11);
+
+    font-family: 'Poppins', 'Arial', sans-serif;
+    color: white;
+
+    font-size: large;
+
+    border-radius: 5px;
+    border: solid 2px rgb(0, 0, 0);
+
+    transition: 0.1s;
+
+}
+
+#save:hover {
+    background-color: rgb(42, 114, 22);
+    transition: 0.1s;
+}
+
+#save:active {
+    background-color: rgb(19, 180, 177);
+}
+
+#delete {
+    background-color: rgb(134, 0, 0);
+
+    font-family: 'Poppins', 'Arial', sans-serif;
+    color: white;
+
+    font-size: large;
+
+    border-radius: 5px;
+    border: solid 2px rgb(0, 0, 0);
+
+    transition: 0.1s;
+}
+
+#delete:hover {
+    background-color: rgb(164, 13, 13);
+    transition: 0.1s;
+}
+
+#delete:active {
+    background-color: rgb(225, 78, 25);
+}

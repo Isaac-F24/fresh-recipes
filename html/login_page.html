@@ -1,0 +1,24 @@
+{% include "head.html" %}
+<link rel="stylesheet" href="{{ url_for('static', filename='login_page.css') }}">
+<body>
+
+    {% include "header.html" %}
+
+    <div id="loginBox">
+        <h1> Login </h1>
+        <form action="/login" method="POST" id="loginForm">
+            <input class="loginText" type="text" name="email" placeholder="Email" required>
+
+            <input class="loginText" type="password" name="password" placeholder="Password" required>
+
+            <input class="loginButton" type="submit" value="Login">
+        </form>
+        {% if error %}
+        <p id="error">{{ error }}</p>
+        {% endif %}
+
+        <p id="signupLink">Don't have an account? <a href="/signup">Sign up here</a></p>
+    </div>
+
+
+</body>

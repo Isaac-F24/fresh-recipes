@@ -1,0 +1,36 @@
+{% include "head.html" %}
+<link rel="stylesheet" href="{{ url_for('static', filename='recipe.css') }}">
+<body>
+
+    {% include "header.html" %}
+
+    <div id="recipe">
+
+
+        <h1> {{ recipe.name }} </h1>
+
+        {% if recipe.photo %}
+        <img id="recipeImg", src="{{ recipe.photo }}" alt="Recipe image">
+        {% else %}
+        <img id="img" src="{{ url_for('static', filename='default.jpg') }}" alt="No image">
+        {% endif %}
+
+        <p id="info" > {{ recipe.type }} | Created by {{ recipe.user_email }} | Posted {{ recipe.date_posted }} </p>
+
+        <h2> Ingredients </h2>
+        <ul>
+            {% for ingredient in ingredients %}
+            <li> {{ ingredient.quantity }} {{ ingredient.name }} </li>
+            {% endfor %}
+        </ul>
+
+        <h2> Instructions </h2>
+        <p id="method"> {{ recipe.method }} </p>
+
+        {% if owned %}
+        <a href="/edit_recipe/{{ recipe.id }}"> <button id="edit"> Edit Recipe </button> </a>
+        {% endif %}
+        
+
+    </div>
+</body>

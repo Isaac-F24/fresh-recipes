@@ -1,0 +1,59 @@
+{% include "head.html" %}
+<link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
+<body>
+
+    {% include "header.html" %}
+
+    <div id="box">
+        <h2> Advanced Search </h2>
+        <form action="/search" method="post" id="form">
+            <input type="search" name="name" placeholder="Name">
+            <input type="text" name="id" placeholder="Recipe ID">
+            <input type="text" name="type" placeholder="Type">
+            <input type="text" name="email" placeholder="Creator Email">
+            <input type="text" name="ingredients" placeholder="Contains ingredients">
+            <h4> Rating: </h4>
+            <input type="number" name="min_rating" placeholder="Minimum">
+            <input type="number" name="max_rating" placeholder="Maximum">
+            <h4></h4>
+            <input type="submit" value="Search" class="button">
+    </div>
+
+    <div id="results">
+        {% if results == "empty" %}
+        <h1> No results found</h1>
+        {% else %}
+        
+        {% if results %}
+        {% for recipe in results %}
+
+        <div class="recipe">
+            <h3> {{ recipe.name }} </h3>
+
+            {% if recipe.photo %}
+            <img id="img" src="{{ recipe.photo }}" alt="Recipe image">
+            {% else %}
+            <img id="img" src="{{ url_for('static', filename='default.jpg') }}" alt="No image">
+            {% endif %}
+
+            <p class="idNum"> #{{ recipe.id }} </p>
+            <p> Type: {{ recipe.type }} </p>
+            <p> Creator: {{ recipe.user_email }} </p>
+            {% if recipe.avg %}
+            <p> Rating: {{ recipe.avg }} </p>
+            {% else %}
+            <p> No ratings </p>
+            {% endif %}
+            <a href="/recipe/{{ recipe.id }}">
+                <button type="button" class="button">View</button>
+            </a>
+        </div>
+        
+        {% endfor %}
+        {% endif %}
+
+        {% endif %}
+    </div>
+
+
+</body>
